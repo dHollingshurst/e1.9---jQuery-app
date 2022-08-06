@@ -13,7 +13,7 @@ if (inputValue === '') {
     list.append(li);
 }
 
-// 2. crossing out an item
+// 2. crossing out an item. not sure why we can't do this with just li.on event
 function crossOut() {
     li.toggleClass("strike");
 }
