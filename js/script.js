@@ -17,7 +17,7 @@ function newItem() {
     } else {
         $('#list').append(li);
     }
-}
+
 
 
 
@@ -44,3 +44,4 @@ function deleteListItem() {
 
 // 4. reordering the items
 $('#list').sortable();
+}
