@@ -1,9 +1,11 @@
 // jQuery
 
 // 1. adding a new item to the list
+function newItem() {
 let inputValue = $('#input').val();
 let li = $('<li></li>');
 li.append(inputValue);
+}
 
 
 if (inputValue === '') {
