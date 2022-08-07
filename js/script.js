@@ -1,21 +1,21 @@
-let toDoList = (function () {
+
 
 // jQuery
 
 // 1. adding a new item to the list
-let btn = $('#button');
-let input = $('#input').val()
+
+
 
 function newItem() {
     let li = $('<li></li>');
+    let input = $('#input');
     let inputValue = input.val();
     li.append(inputValue);
 
     if (inputValue === '') {
         alert("you must write something!");
     } else {
-        let list = $('#list');
-        list.append(li);
+        $('#list').append(li);
     }
 }
 
@@ -27,11 +27,13 @@ function crossOut() {
     li.toggleClass("strike");
 }
 
-li.on("dblclick", crossOut);
+li.on("dblclick", function crossOut() {
+    li.toggleClass("strike");
+});
 
 // 3 adding the delete button "X"
-let crossOutButton = $('<crossOutButton></crossOutButton>');
-crossOutButton.append("X");
+let crossOutButton = $("<crossOutButton></crossOutButton>");
+crossOutButton.append(document.createTextNode("X"));
 li.append(crossOutButton);
 
 crossOutButton.on("click", deleteListItem);
@@ -42,4 +44,3 @@ function deleteListItem() {
 
 // 4. reordering the items
 $('#list').sortable();
-});
