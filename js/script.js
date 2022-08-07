@@ -1,12 +1,21 @@
 // jQuery
 
 // 1. adding a new item to the list
+
+
+
 function newItem() {
-let inputValue = $('#input').val();
-let li = $('<li></li>');
-li.append(inputValue);
+    let inputValue = $('#input').val();
+    let li = $('<li></li>');
+    li.append(inputValue);
 }
 
+let btn = $('#button');
+btn.on("click", function newItem() {
+    let inputValue = $('#input').val();
+    let li = $('<li></li>');
+    li.append(inputValue);
+});
 
 if (inputValue === '') {
     alert("you must write something!");
