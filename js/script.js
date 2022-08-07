@@ -44,4 +44,4 @@ function deleteListItem() {
 
 // 4. reordering the items
 $('#list').sortable();
-}
+};
